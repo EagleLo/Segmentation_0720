@@ -22,7 +22,7 @@ tf.disable_v2_behavior()
 
 from nets import alexnet
 
-slim = tf.contrib.slim
+slim = tf_slim
 
 
 class AlexnetV2Test(tf.test.TestCase):

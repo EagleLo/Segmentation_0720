@@ -22,7 +22,7 @@ tf.disable_v2_behavior()
 
 from nets.nasnet import pnasnet
 
-slim = tf.contrib.slim
+slim = tf_slim
 
 
 class PNASNetTest(tf.test.TestCase):

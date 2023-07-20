@@ -29,7 +29,7 @@ from nets.nasnet import nasnet
 from nets.nasnet import nasnet_utils
 
 arg_scope = tf.contrib.framework.arg_scope
-slim = tf.contrib.slim
+slim = tf_slim
 
 
 def large_imagenet_config():

@@ -29,7 +29,7 @@ tf.disable_v2_behavior()
 
 from nets import inception_utils
 
-slim = tf.contrib.slim
+slim = tf_slim
 
 
 def block_inception_a(inputs, scope=None, reuse=None):

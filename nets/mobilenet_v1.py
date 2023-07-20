@@ -111,7 +111,7 @@ import functools
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 
-slim = tf.contrib.slim
+slim = tf_slim
 
 # Conv and DepthSepConv namedtuple define layers of the MobileNet architecture
 # Conv defines 3x3 convolution layers

@@ -26,7 +26,7 @@ from datasets import dataset_factory
 from nets import mobilenet_v1
 from preprocessing import preprocessing_factory
 
-slim = tf.contrib.slim
+slim = tf_slim
 
 flags = tf.app.flags
 

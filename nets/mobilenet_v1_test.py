@@ -24,7 +24,7 @@ tf.disable_v2_behavior()
 
 from nets import mobilenet_v1
 
-slim = tf.contrib.slim
+slim = tf_slim
 
 
 class MobilenetV1Test(tf.test.TestCase):

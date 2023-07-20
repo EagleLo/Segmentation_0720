@@ -22,7 +22,7 @@ tf.disable_v2_behavior()
 
 from nets import overfeat
 
-slim = tf.contrib.slim
+slim = tf_slim
 
 
 class OverFeatTest(tf.test.TestCase):

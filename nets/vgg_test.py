@@ -23,7 +23,7 @@ tf.disable_v2_behavior()
 
 from nets import vgg
 
-slim = tf.contrib.slim
+slim = tf_slim
 
 
 class VGGATest(tf.test.TestCase):

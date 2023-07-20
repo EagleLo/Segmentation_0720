@@ -23,7 +23,7 @@ from six.moves import xrange  # pylint: disable=redefined-builtin
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 
-slim = tf.contrib.slim
+slim = tf_slim
 
 
 def _validate_image_inputs(inputs):

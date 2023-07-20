@@ -27,7 +27,7 @@ tf.disable_v2_behavior()
 from nets.nasnet import nasnet_utils
 
 arg_scope = tf.contrib.framework.arg_scope
-slim = tf.contrib.slim
+slim = tf_slim
 
 
 # Notes for training NASNet Cifar Model

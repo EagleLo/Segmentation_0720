@@ -36,7 +36,7 @@ tf.disable_v2_behavior()
 
 
 arg_scope = tf.contrib.framework.arg_scope
-slim = tf.contrib.slim
+slim = tf_slim
 
 DATA_FORMAT_NCHW = 'NCHW'
 DATA_FORMAT_NHWC = 'NHWC'

@@ -27,7 +27,7 @@ from __future__ import print_function
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 
-slim = tf.contrib.slim
+slim = tf_slim
 
 
 def inception_arg_scope(weight_decay=0.00004,

@@ -24,7 +24,7 @@ tf.disable_v2_behavior()
 
 from nets import inception
 
-slim = tf.contrib.slim
+slim = tf_slim
 
 
 class InceptionV3Test(tf.test.TestCase):

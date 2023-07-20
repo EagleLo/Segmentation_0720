@@ -137,7 +137,7 @@ class DeepLab(object):
 
     def initialize_backbone_from_pretrained_weights(self, path_to_pretrained_weights):
 
-        variables_to_restore = tf.contrib.slim.get_variables_to_restore(exclude=['global_step'])
+        variables_to_restore = tf_slim.get_variables_to_restore(exclude=['global_step'])
         valid_prefix = 'backbone/'
         tf.train.init_from_checkpoint(path_to_pretrained_weights, {v.name[len(valid_prefix):].split(':')[0]: v for v in variables_to_restore if v.name.startswith(valid_prefix)})
 

@@ -64,7 +64,7 @@ from nets import resnet_utils
 
 
 resnet_arg_scope = resnet_utils.resnet_arg_scope
-slim = tf.contrib.slim
+slim = tf_slim
 
 
 class NoOpScope(object):
