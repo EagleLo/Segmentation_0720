@@ -5,7 +5,7 @@ from nets.mobilenet import mobilenet_v2
 import tf_slim
 
 def Vgg16(imgs_in, weight_decay, batch_norm_momentum):
-    regularizer = tf.contrib.layers.l2_regularizer(weight_decay)
+    regularizer = tf.keras.layers.l2_regularizer(weight_decay)
 
     conv1_1 = tf.layers.conv2d(
         imgs_in,

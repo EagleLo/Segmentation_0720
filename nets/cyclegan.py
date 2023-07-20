@@ -23,7 +23,7 @@ import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()t.v1 as tf
 tf.disable_v2_behavior()
 
-layers = tf.contrib.layers
+layers = tf.keras.layers
 
 
 def cyclegan_arg_scope(instance_norm_center=True,

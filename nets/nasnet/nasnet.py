@@ -136,8 +136,8 @@ def nasnet_cifar_arg_scope(weight_decay=5e-4,
       'scale': True,
       'fused': True,
   }
-  weights_regularizer = tf.contrib.layers.l2_regularizer(weight_decay)
-  weights_initializer = tf.contrib.layers.variance_scaling_initializer(
+  weights_regularizer = tf.keras.layers.l2_regularizer(weight_decay)
+  weights_initializer = tf.keras.layers.variance_scaling_initializer(
       mode='FAN_OUT')
   with arg_scope([slim.fully_connected, slim.conv2d, slim.separable_conv2d],
                  weights_regularizer=weights_regularizer,
@@ -172,8 +172,8 @@ def nasnet_mobile_arg_scope(weight_decay=4e-5,
       'scale': True,
       'fused': True,
   }
-  weights_regularizer = tf.contrib.layers.l2_regularizer(weight_decay)
-  weights_initializer = tf.contrib.layers.variance_scaling_initializer(
+  weights_regularizer = tf.keras.layers.l2_regularizer(weight_decay)
+  weights_initializer = tf.keras.layers.variance_scaling_initializer(
       mode='FAN_OUT')
   with arg_scope([slim.fully_connected, slim.conv2d, slim.separable_conv2d],
                  weights_regularizer=weights_regularizer,
@@ -208,8 +208,8 @@ def nasnet_large_arg_scope(weight_decay=5e-5,
       'scale': True,
       'fused': True,
   }
-  weights_regularizer = tf.contrib.layers.l2_regularizer(weight_decay)
-  weights_initializer = tf.contrib.layers.variance_scaling_initializer(
+  weights_regularizer = tf.keras.layers.l2_regularizer(weight_decay)
+  weights_initializer = tf.keras.layers.variance_scaling_initializer(
       mode='FAN_OUT')
   with arg_scope([slim.fully_connected, slim.conv2d, slim.separable_conv2d],
                  weights_regularizer=weights_regularizer,
@@ -241,7 +241,7 @@ def _build_aux_head(net, end_points, num_classes, hparams, scope):
       aux_logits = slim.conv2d(aux_logits, 768, shape, padding='VALID')
       aux_logits = slim.batch_norm(aux_logits, scope='aux_bn1')
       aux_logits = tf.nn.relu(aux_logits)
-      aux_logits = tf.contrib.layers.flatten(aux_logits)
+      aux_logits = tf.keras.layers.flatten(aux_logits)
       aux_logits = slim.fully_connected(aux_logits, num_classes)
       end_points['AuxLogits'] = aux_logits
 

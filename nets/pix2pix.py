@@ -35,7 +35,7 @@ import functools
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 
-layers = tf.contrib.layers
+layers = tf.keras.layers
 
 
 def pix2pix_arg_scope():

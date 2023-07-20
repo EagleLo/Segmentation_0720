@@ -25,7 +25,7 @@ class DeepLab(object):
         self.target_width = tf.placeholder(tf.int32, None, name='target_image_width')
 
         self.weight_decay = tf.placeholder(tf.float32, None, name='weight_decay')
-        self.regularizer = tf.contrib.layers.l2_regularizer(scale=self.weight_decay)
+        self.regularizer = tf.keras.layers.l2_regularizer(scale=self.weight_decay)
         self.batch_norm_momentum = batch_norm_momentum
 
         self.feature_map = self.backbone_initializer(base_architecture)
