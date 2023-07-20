@@ -2,7 +2,7 @@ import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 from nets import resnet_v2
 from nets.mobilenet import mobilenet_v2
-
+import tf_slim
 
 def Vgg16(imgs_in, weight_decay, batch_norm_momentum):
     regularizer = tf.contrib.layers.l2_regularizer(weight_decay)

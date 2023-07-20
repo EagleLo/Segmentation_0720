@@ -22,7 +22,7 @@ tf.disable_v2_behavior()t.v1 as tf
 tf.disable_v2_behavior()
 
 from nets import vgg
-
+import tf_slim
 slim = tf_slim
 
 

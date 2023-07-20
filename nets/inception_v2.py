@@ -22,7 +22,7 @@ import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 
 from nets import inception_utils
-
+import tf_slim
 slim = tf_slim
 trunc_normal = lambda stddev: tf.truncated_normal_initializer(0.0, stddev)
 

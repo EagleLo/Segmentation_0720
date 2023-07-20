@@ -24,7 +24,7 @@ from nets.mobilenet import conv_blocks as ops
 from nets.mobilenet import mobilenet
 from nets.mobilenet import mobilenet_v2
 
-
+import tf_slim
 slim = tf_slim
 
 

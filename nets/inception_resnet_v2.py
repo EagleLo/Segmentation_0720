@@ -27,7 +27,7 @@ from __future__ import print_function
 
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
-
+import tf_slim
 slim = tf_slim
 
 

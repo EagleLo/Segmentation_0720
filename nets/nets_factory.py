@@ -34,7 +34,7 @@ from nets import vgg
 from nets.mobilenet import mobilenet_v2
 from nets.nasnet import nasnet
 from nets.nasnet import pnasnet
-
+import tf_slim
 slim = tf_slim
 
 networks_map = {'alexnet_v2': alexnet.alexnet_v2,

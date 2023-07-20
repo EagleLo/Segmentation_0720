@@ -15,7 +15,7 @@ from utils import (DataPreprocessor, Dataset, Iterator,
                    validation_single_demo)
 
 
-def train(network_backbone, pre_trained_model=None, trainset_filename='data/datasets/VOCdevkit/VOC2012/ImageSets/Segmentation/train.txt', valset_filename='data/datasets/VOCdevkit/VOC2012/ImageSets/Segmentation/val.txt', images_dir='data/datasets/VOCdevkit/VOC2012/JPEGImages/', labels_dir='data/datasets/VOCdevkit/VOC2012/SegmentationClass/', trainset_augmented_filename='data/datasets/SBD/train_noval.txt', images_augmented_dir='data/datasets/SBD/benchmark_RELEASE/dataset/img/', labels_augmented_dir='data/datasets/SBD/benchmark_RELEASE/dataset/cls/', model_dir=None, log_dir='data/logs/deeplab/'):
+def train(network_backbone, pre_trained_model=None, trainset_filename='data/VOCdevkit/VOC2012/ImageSets/Segmentation/train.txt', valset_filename='data/VOCdevkit/VOC2012/ImageSets/Segmentation/val.txt', images_dir='data/VOCdevkit/VOC2012/JPEGImages/', labels_dir='data/VOCdevkit/VOC2012/SegmentationClass/', trainset_augmented_filename='data/SBD/train_noval.txt', images_augmented_dir='data/SBD/benchmark_RELEASE/dataset/img/', labels_augmented_dir='data/SBD/benchmark_RELEASE/dataset/cls/', model_dir=None, log_dir='data/logs/deeplab/'):
 
     if not model_dir:
         model_dir = 'data/models/deeplab/{}_voc2012/'.format(network_backbone)
@@ -151,13 +151,13 @@ if __name__ == '__main__':
 
     network_backbone_default = 'resnet_101'
     pre_trained_model_default = 'data/models/pretrained/resnet_101/resnet_v2_101.ckpt'
-    trainset_filename_default = 'data/datasets/VOCdevkit/VOC2012/ImageSets/Segmentation/train.txt'
-    valset_filename_default = 'data/datasets/VOCdevkit/VOC2012/ImageSets/Segmentation/val.txt'
-    images_dir_default = 'data/datasets/VOCdevkit/VOC2012/JPEGImages/'
-    labels_dir_default = 'data/datasets/VOCdevkit/VOC2012/SegmentationClass/'
-    trainset_augmented_filename_default = 'data/datasets/SBD/train_noval.txt'
-    images_augmented_dir_default = 'data/datasets/SBD/benchmark_RELEASE/dataset/img/'
-    labels_augmented_dir_default = 'data/datasets/SBD/benchmark_RELEASE/dataset/cls/'
+    trainset_filename_default = 'data/VOCdevkit/VOC2012/ImageSets/Segmentation/train.txt'
+    valset_filename_default = 'data/VOCdevkit/VOC2012/ImageSets/Segmentation/val.txt'
+    images_dir_default = 'data/VOCdevkit/VOC2012/JPEGImages/'
+    labels_dir_default = 'data/VOCdevkit/VOC2012/SegmentationClass/'
+    trainset_augmented_filename_default = 'data/SBD/train_noval.txt'
+    images_augmented_dir_default = 'data/SBD/benchmark_RELEASE/dataset/img/'
+    labels_augmented_dir_default = 'data/SBD/benchmark_RELEASE/dataset/cls/'
     model_dir_default = 'data/models/deeplab/{}_voc2012/'.format(network_backbone_default)
     log_dir_default = 'data/logs/deeplab/'
     random_seed_default = 0

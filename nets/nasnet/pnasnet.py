@@ -27,7 +27,7 @@ tf.disable_v2_behavior()
 
 from nets.nasnet import nasnet
 from nets.nasnet import nasnet_utils
-
+import tf_slim
 arg_scope = tf.contrib.framework.arg_scope
 slim = tf_slim
 

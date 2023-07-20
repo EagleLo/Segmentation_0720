@@ -24,7 +24,7 @@ tf.disable_v2_behavior()
 from datasets import dataset_factory
 from nets import mobilenet_v1
 from preprocessing import preprocessing_factory
-
+import tf_slim
 slim = tf_slim
 
 flags = tf.app.flags

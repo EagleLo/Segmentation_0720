@@ -21,7 +21,7 @@ import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 
 from nets import alexnet
-
+import tf_slim
 slim = tf_slim
 
 

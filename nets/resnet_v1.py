@@ -62,7 +62,7 @@ tf.disable_v2_behavior()
 
 from nets import resnet_utils
 
-
+import tf_slim
 resnet_arg_scope = resnet_utils.resnet_arg_scope
 slim = tf_slim
 

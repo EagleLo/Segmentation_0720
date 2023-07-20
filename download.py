@@ -91,13 +91,13 @@ def extract(archive_filepath, archive_type, destination_dir, force=False):
     print('Extraction complete!')
 
 
-def download_voc2012(downloads_dir='data/downloads/', data_dir='data/datasets/', force=False):
+def download_voc2012(downloads_dir='data/downloads/', data_dir='data/', force=False):
     url = 'http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar'
     filepath = download(url, downloads_dir, force=force)
     extract(filepath, 'tar', data_dir, force=force)
 
 
-def download_sbd(downloads_dir='data/downloads/', data_dir='data/datasets/SBD/', force=False):
+def download_sbd(downloads_dir='data/downloads/', data_dir='data/SBD/', force=False):
     '''
     http://home.bharathh.info/pubs/codes/SBD/download.html
     '''
@@ -111,7 +111,7 @@ def download_sbd(downloads_dir='data/downloads/', data_dir='data/datasets/SBD/',
     extract(filepath, 'tar', data_dir, force=force)
 
 
-def download_cityscapes(downloads_dir='data/downloads/cityscapes/', data_dir='data/datasets/cityscapes/', force=False):
+def download_cityscapes(downloads_dir='data/downloads/cityscapes/', data_dir='data/cityscapes/', force=False):
     '''
     Does basically the same thing as following bash commands:
     curl -c cs_cookies -d "username=StArchon&password=eUpMJjMW4mbEUjZ&submit=Login" https://www.cityscapes-dataset.com/login/
@@ -151,7 +151,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Download DeepLab semantic segmentation datasets and pretrained backbone models.')
 
     downloads_dir_default = 'data/downloads/'
-    data_dir_default = 'data/datasets/'
+    data_dir_default = 'data/'
     pretrained_models_dir_default = 'data/models/pretrained/'
     pretrained_models_default = ['resnet_50', 'resnet_101', 'mobilenet_1.0_224']
 

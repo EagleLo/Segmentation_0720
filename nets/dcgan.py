@@ -22,7 +22,7 @@ from math import log
 from six.moves import xrange  # pylint: disable=redefined-builtin
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
-
+import tf_slim
 slim = tf_slim
 
 

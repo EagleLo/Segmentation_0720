@@ -1,0 +1,220 @@
+# Query: tf_slim
+# ContextLines: 1
+
+44 results - 40 files
+
+feature_extractor.py:
+  146      network = getattr(resnet_v2, 'resnet_v2_{}'.format(n_layers))
+  147:     with tf_slim.arg_scope(resnet_v2.resnet_arg_scope(weight_decay=weight_decay, batch_norm_decay=batch_norm_momentum)):
+  148          features, _ = network(imgs_in, is_training=is_training, global_pool=False, output_stride=16)
+
+  153  def MobileNet(depth_multiplier, imgs_in, weight_decay, batch_norm_momentum, is_training):
+  154:     with tf_slim.arg_scope(mobilenet_v2.training_scope(is_training=is_training, weight_decay=weight_decay, bn_decay=batch_norm_momentum)):
+  155          features, _ = mobilenet_v2.mobilenet_base(imgs_in, depth_multiplier=depth_multiplier, finegrain_classification_mode=depth_multiplier < 1, output_stride=16)
+
+model.py:
+  139  
+  140:         variables_to_restore = tf_slim.get_variables_to_restore(exclude=['global_step'])
+  141          valid_prefix = 'backbone/'
+
+nets/alexnet_test.py:
+  24  
+  25: slim = tf_slim
+  26  
+
+nets/alexnet.py:
+  41  
+  42: slim = tf_slim
+  43  trunc_normal = lambda stddev: tf.truncated_normal_initializer(0.0, stddev)
+
+nets/cifarnet.py:
+  23  
+  24: slim = tf_slim
+  25  
+
+nets/dcgan.py:
+  25  
+  26: slim = tf_slim
+  27  
+
+nets/inception_resnet_v2.py:
+  30  
+  31: slim = tf_slim
+  32  
+
+nets/inception_utils.py:
+  29  
+  30: slim = tf_slim
+  31  
+
+nets/inception_v1_test.py:
+  26  
+  27: slim = tf_slim
+  28  
+
+nets/inception_v1.py:
+  25  
+  26: slim = tf_slim
+  27  trunc_normal = lambda stddev: tf.truncated_normal_initializer(0.0, stddev)
+
+nets/inception_v2_test.py:
+  27  
+  28: slim = tf_slim
+  29  
+
+nets/inception_v2.py:
+  25  
+  26: slim = tf_slim
+  27  trunc_normal = lambda stddev: tf.truncated_normal_initializer(0.0, stddev)
+
+nets/inception_v3_test.py:
+  26  
+  27: slim = tf_slim
+  28  
+
+nets/inception_v3.py:
+  25  
+  26: slim = tf_slim
+  27  trunc_normal = lambda stddev: tf.truncated_normal_initializer(0.0, stddev)
+
+nets/inception_v4.py:
+  31  
+  32: slim = tf_slim
+  33  
+
+nets/lenet.py:
+  23  
+  24: slim = tf_slim
+  25  
+
+nets/mobilenet_v1_eval.py:
+  28  
+  29: slim = tf_slim
+  30  
+
+nets/mobilenet_v1_test.py:
+  26  
+  27: slim = tf_slim
+  28  
+
+nets/mobilenet_v1_train.py:
+  27  
+  28: slim = tf_slim
+  29  
+
+nets/mobilenet_v1.py:
+  113  
+  114: slim = tf_slim
+  115  
+
+nets/nets_factory.py:
+  37  
+  38: slim = tf_slim
+  39  
+
+nets/overfeat_test.py:
+  24  
+  25: slim = tf_slim
+  26  
+
+nets/overfeat.py:
+  37  
+  38: slim = tf_slim
+  39  trunc_normal = lambda stddev: tf.truncated_normal_initializer(0.0, stddev)
+
+nets/resnet_utils.py:
+  43  
+  44: slim = tf_slim
+  45  
+
+nets/resnet_v1_test.py:
+  27  
+  28: slim = tf_slim
+  29  
+
+nets/resnet_v1.py:
+  66  resnet_arg_scope = resnet_utils.resnet_arg_scope
+  67: slim = tf_slim
+  68  
+
+nets/resnet_v2_test.py:
+  27  
+  28: slim = tf_slim
+  29  
+
+nets/resnet_v2.py:
+  57  
+  58: slim = tf_slim
+  59  resnet_arg_scope = resnet_utils.resnet_arg_scope
+
+nets/vgg_test.py:
+  25  
+  26: slim = tf_slim
+  27  
+
+nets/vgg.py:
+  46  
+  47: slim = tf_slim
+  48  
+
+nets/mobilenet/conv_blocks.py:
+  21  
+  22: slim = tf_slim
+  23  
+
+nets/mobilenet/mobilenet_example.ipynb:
+  248          "# Note: arg_scope is optional for inference.\n",
+  249:         "with tf_slim.arg_scope(mobilenet_v2.training_scope(is_training=False)):\n",
+  250          "  logits, endpoints = mobilenet_v2.mobilenet(images)\n",
+
+nets/mobilenet/mobilenet_v2_test.py:
+  27  
+  28: slim = tf_slim
+  29  
+
+nets/mobilenet/mobilenet_v2.py:
+   35  
+   36: slim = tf_slim
+   37  op = lib.op
+
+  101  
+  102:   with tf_slim.arg_scope(mobilenet_v2.training_scope()):
+  103       logits, endpoints = mobilenet_v2.mobilenet(input_tensor)
+
+  197    Usage:
+  198:      with tf_slim.arg_scope(mobilenet_v2.training_scope()):
+  199         logits, endpoints = mobilenet_v2.mobilenet(input_tensor)
+
+nets/mobilenet/mobilenet.py:
+   28  
+   29: slim = tf_slim
+   30  
+
+  423    Usage:
+  424:      with tf_slim.arg_scope(mobilenet.training_scope()):
+  425         logits, endpoints = mobilenet_v2.mobilenet(input_tensor)
+
+nets/nasnet/nasnet_test.py:
+  24  
+  25: slim = tf_slim
+  26  
+
+nets/nasnet/nasnet_utils.py:
+  38  arg_scope = tf.contrib.framework.arg_scope
+  39: slim = tf_slim
+  40  
+
+nets/nasnet/nasnet.py:
+  29  arg_scope = tf.contrib.framework.arg_scope
+  30: slim = tf_slim
+  31  
+
+nets/nasnet/pnasnet_test.py:
+  24  
+  25: slim = tf_slim
+  26  
+
+nets/nasnet/pnasnet.py:
+  31  arg_scope = tf.contrib.framework.arg_scope
+  32: slim = tf_slim
+  33  

@@ -32,7 +32,7 @@ tf.disable_v2_behavior()
 
 from nets.mobilenet import conv_blocks as ops
 from nets.mobilenet import mobilenet as lib
-
+import tf_slim
 slim = tf_slim
 op = lib.op
 

@@ -28,7 +28,7 @@ import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 
 from nets import inception_utils
-
+import tf_slim
 slim = tf_slim
 
 

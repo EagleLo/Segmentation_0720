@@ -21,7 +21,7 @@ import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 
 from nets.nasnet import pnasnet
-
+import tf_slim
 slim = tf_slim
 
 

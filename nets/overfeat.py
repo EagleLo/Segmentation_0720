@@ -34,7 +34,7 @@ from __future__ import print_function
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()t.v1 as tf
 tf.disable_v2_behavior()
-
+import tf_slim
 slim = tf_slim
 trunc_normal = lambda stddev: tf.truncated_normal_initializer(0.0, stddev)
 
