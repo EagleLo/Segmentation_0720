@@ -4,7 +4,8 @@ import os
 
 import numpy as np
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 from model import DeepLab
 from tqdm import trange
 from utils import (DataPreprocessor, Dataset, Iterator,

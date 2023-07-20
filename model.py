@@ -2,7 +2,8 @@
 import os
 from datetime import datetime
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 from feature_extractor import MobileNet, Resnet, Vgg16
 from modules import atrous_spatial_pyramid_pooling
 

@@ -1,4 +1,5 @@
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 from nets import resnet_v2
 from nets.mobilenet import mobilenet_v2
 

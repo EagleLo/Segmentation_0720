@@ -27,7 +27,8 @@ from __future__ import print_function
 import copy
 import functools
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 from nets.mobilenet import conv_blocks as ops
 from nets.mobilenet import mobilenet as lib

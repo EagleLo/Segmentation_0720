@@ -20,7 +20,8 @@ from __future__ import print_function
 from math import log
 
 from six.moves import xrange  # pylint: disable=redefined-builtin
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 slim = tf.contrib.slim
 
